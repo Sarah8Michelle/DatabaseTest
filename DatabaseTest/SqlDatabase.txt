@@ -1,0 +1,29 @@
+﻿create table Table1(
+	Id			int				primary key identity(1,1),
+	FullName	varchar(30)		not null,
+	IdNumber	int				not null	unique,
+	Email		varchar(250)
+	IsChecked	bit
+);
+
+create table Table2(
+	Id			int				primary key identity(1,1),
+	FullName1	varchar(30)		not null,
+	IdNumber1	int				not null	unique,
+	Email1		varchar(250)
+);
+
+USE [DatabaseTestWS]
+GO
+SET IDENTITY_INSERT [dbo].[Table1] ON
+GO
+INSERT [dbo].[Table1]([Id], [FullName], [IdNumber], [Email], [IsChecked]) VALUES (1, 'Gomez Gutierrez', 123456, 'gutierrez.gomez@gmail.com', 1)
+GO
+INSERT [dbo].[Table1]([Id], [FullName], [IdNumber], [Email], [IsChecked]) VALUES (2, 'Luisa Perdona', 654321, 'perdona.luisa@gmail.com', 0)
+GO
+INSERT [dbo].[Table1]([Id], [FullName], [IdNumber], [Email], [IsChecked]) VALUES (3, 'Amado Castillo', 789101, 'castillo.amado@gmail.com', 1)
+GO
+INSERT [dbo].[Table1]([Id], [FullName], [IdNumber], [Email], [IsChecked]) VALUES (4, 'Lope Jimenez', 354638, 'jimenez.lope@gmail.com', 0)
+GO
+SET IDENTITY_INSERT [dbo].[Table1] OFF
+GO
